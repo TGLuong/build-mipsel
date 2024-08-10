@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build
-      run: cargo build --verbose --release --target=mipsel-unknown-linux-musl
+      run: cargo +nightly build -Z build-std --target=mipsel-unknown-linux-musl
     - name: Run tests
       run: cargo test --verbose
